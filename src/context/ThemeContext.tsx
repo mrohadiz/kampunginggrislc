@@ -10,8 +10,11 @@ interface ThemeContextType {
 export const ThemeContext = createContext<ThemeContextType>({});
 
 export const ThemeProvider = ({ children }: any) => {
+  // const [theme, setTheme] = useState<string>(
+  //   () => localStorage.getItem("theme") || "light"
+  // );
   const [theme, setTheme] = useState<string>(
-    () => localStorage.getItem("theme") || "light"
+    typeof window !== "undefined" ? localStorage.theme : "light"
   );
 
   useEffect(() => {
