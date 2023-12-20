@@ -1,11 +1,19 @@
-import Image from 'next/image'
+import CTA from '@/components/CTA'
+import Teachers from '@/components/Teachers'
+import Hero from '@/components/Hero'
+import Timeline from '@/components/Timeline'
+import Manfaat from '@/components/Manfaat'
+import Alumni from '@/components/Alumni'
 
 export default function Home() {
   return (
-    <main className="p-24">
-      <h1 className='text-3xl font-bold pb-20'>NextJs 14 Starter with Theme</h1>
-      <p className='text-2xl '> Change the theme mode and refresh the page. WOW !!! your selected  theme saved</p>
-
+    <main className="">
+      <Hero />
+      <CTA />
+      <Timeline />
+      <Manfaat />
+      <Alumni />
+      <Teachers />
     </main>
   )
 }

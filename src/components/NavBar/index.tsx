@@ -8,11 +8,11 @@ export default function NavBar() {
   const { changeTheme } = useContext(ThemeContext);
   return (
     <>
-      <div className="navbar bg-base-100 mb-20 justify-around">
+      <div className="navbar bg-base-200 px-10 justify-around fixed z-50">
         <div className="navbar-start">
 
           <Link href="/" className="btn btn-ghost text-xl">
-            Home
+            Language Center
           </Link>
         </div>
 
