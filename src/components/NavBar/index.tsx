@@ -1,7 +1,8 @@
 "use client";
+import { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
 import Link from "next/link";
-import { useContext } from "react";
+import Image from "next/image";
 import ThemeSwap from "../ThemeBtn";
 
 export default function NavBar() {
@@ -12,7 +13,12 @@ export default function NavBar() {
         <div className="navbar-start">
 
           <Link href="/" className="btn btn-ghost text-xl">
-            Language Center
+            <Image
+              alt="kampung inggris lc logo"
+              src="/logo-white.webp"
+              width={50}
+              height={50}
+            />
           </Link>
         </div>
 

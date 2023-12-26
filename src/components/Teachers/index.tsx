@@ -1,4 +1,11 @@
 "use client"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import Image from "next/image"
 import teacher_1 from "../../assets/kampung-inggris-lc-pare-teacher-1.webp"
@@ -26,20 +33,56 @@ export default function Teachers() {
     return (
         <div className="container flex flex-col py-10">
             <article className="container prose flex flex-col w-full text-center">
-                <h2 className="text-2xl sm:text-4xl font-bold mb-2">Yuk Kenalan Sama Teacher</h2>
+                <h1 className="text-3xl sm:text-5xl font-bold text-center">Yuk Kenalan Sama Teacher LC</h1>
             </article>
 
-            <div className="divider divider-warning sm:divider-horizontal">SWIPE</div>
+            <div className='w-full'>
+                <Swiper
+                    effect={'coverflow'}
+                    loop={true}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={1}
+                    autoHeight={true}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 7,
+                    }}
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 50,
+                        },
+                    }}
+                    pagination={{ el: '.swiper-pagination', clickable: true, dynamicBullets: true }}
+                    navigation={{
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }}
+                    modules={[EffectCoverflow, Pagination, Navigation]}
+                >
+                    {teachers.map((teacher, index) => (
+                        <div key={index}>
+                            <SwiperSlide>
+                                <Image src={teacher} alt="kampung inggris lc teachers" />
+                            </SwiperSlide>
+                        </div>
+                    ))}
 
-            <div className="carousel bg-base-300 rounded-box">
-                {teachers.map((teacher, index) => (
-                    <div key={index} className="carousel-item w-1/3 sm:w-auto">
-                        <Image
-                            alt="kampung inggris lc teacher"
-                            src={teacher}
-                        />
+                    <div className="slider-controler text-warning">
+                        <div className="swiper-button-prev slider-arrow">
+                        </div>
+                        <div className="swiper-button-next slider-arrow">
+                        </div>
+                        <div className="swiper-pagination"></div>
                     </div>
-                ))}
+                </Swiper>
             </div>
         </div>
     )

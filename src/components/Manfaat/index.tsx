@@ -37,8 +37,8 @@ export default function Card() {
     ]
 
     return (
-        <div className="py-10">
-            <article className="container prose flex flex-col w-full text-center">
+        <div className="container py-10 flex flex-col md:flex-row">
+            <article className="prose flex flex-col w-full text-center sm:text-left">
                 <h2 className="text-2xl sm:text-4xl font-bold mb-2">
                     Ini 8 Hal yang Bakal
                     <br />
@@ -46,9 +46,9 @@ export default function Card() {
                 </h2>
             </article>
 
-            <div className="container grid grid-cols-1 gap-2 sm:grid-cols-4 sm:gap-4 place-items-center">
+            <div className="grid grid-cols-2 gap-4 sm:grid sm:grid-cols-3">
                 {content.map((item, index) => (
-                    <div key={index} className="card w-80 sm:w-72 bg-warning text-warning-content">
+                    <div key={index} className="card mb-4 bg-warning text-warning-content">
                         <div className="card-body">
                             <h2 className="card-title">{item.title}</h2>
                             <p>{item.desc}</p>
