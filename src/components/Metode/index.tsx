@@ -36,13 +36,13 @@ export default function Card() {
         <div className="container py-10 flex flex-col md:flex-row">
             <article className="prose flex flex-col w-full text-center sm:text-left">
                 <h2 className="text-2xl sm:text-4xl font-bold mb-2">
-                    7 Metode ala LC Ini Bikin Ribuan Member
+                    7 Metode Kampung Inggris LC Ini Bikin Ribuan Member
                     <br />
                     Lancar Berbahasa Inggris
                 </h2>
             </article>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-2 sm:grid sm:grid-cols-3">
                 {content.map((item, index) => (
                     <div key={index} className="card mb-4 bg-warning text-warning-content">
                         <div className="card-body">

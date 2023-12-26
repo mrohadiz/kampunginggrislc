@@ -19,7 +19,7 @@ export default function Company() {
         <div className="py-20 flex flex-col items-center justify-center gap-4">
             <article className="prose">
                 <h1 className="text-3xl sm:text-5xl font-bold text-center">
-                    Mereka Sudah Belajar di LC
+                    Mereka Sudah Belajar di Kampung Inggris LC
                 </h1>
             </article>
 
@@ -56,8 +56,10 @@ export default function Company() {
                 <h1 className="text-3xl sm:text-5xl font-bold text-center">
                     Sekarang Giliranmu
                 </h1>
-                {/* <h2>Kami Tunggu Kalian di LC!</h2> */}
             </article>
+            <div className="arrow flex items-center justify-center w-full">
+                <svg className="animate-bounce" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z" /></svg>
+            </div>
             <div className="btns flex items-center justify-center gap-4">
                 <Link href="https://registrasi.kampunginggris.id/?br_code=PARE" passHref={true}>
                     <button className="btn btn-warning">Daftar Sekarang</button>

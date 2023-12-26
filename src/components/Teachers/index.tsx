@@ -33,7 +33,7 @@ export default function Teachers() {
     return (
         <div className="container flex flex-col py-10">
             <article className="container prose flex flex-col w-full text-center">
-                <h1 className="text-3xl sm:text-5xl font-bold text-center">Yuk Kenalan Sama Teacher LC</h1>
+                <h1 className="text-3xl sm:text-5xl font-bold text-center">Yuk Kenalan Sama Teacher Kampung Inggris LC</h1>
             </article>
 
             <div className='w-full'>

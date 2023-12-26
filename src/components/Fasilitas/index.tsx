@@ -10,7 +10,7 @@ export default function Fasilitas() {
         <div className="container flex flex-col py-10 w-full">
             <div className="grid flex-grow card place-items-center">
                 <article className="container prose flex flex-col w-full text-center">
-                    <h2 className="text-2xl sm:text-4xl font-bold mb-2">Ini Fasilitas yang Bisa Kamu Nikmati di LC</h2>
+                    <h2 className="text-2xl sm:text-4xl font-bold mb-2">Ini Fasilitas yang Bisa Kamu Nikmati di Kampung Inggris LC</h2>
                 </article>
             </div>
             <Masonry />

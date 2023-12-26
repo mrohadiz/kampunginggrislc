@@ -33,7 +33,7 @@ export default function Alumni() {
         <div className="container flex flex-col w-full lg:flex-row">
             <div className="grid flex-grow sm:h-[70vh] card place-items-center">
                 <article className="container prose flex flex-col w-full text-center">
-                    <h2 className="text-2xl sm:text-4xl font-bold mb-2">Temui Alumni LC yang Sukses dan Dapetin Inspirasi di Sini</h2>
+                    <h2 className="text-2xl sm:text-4xl font-bold mb-2">Temui Alumni Kampung Inggris LC yang Sukses dan Dapetin Inspirasi di Sini</h2>
                 </article>
             </div>
             <div className="hidden sm:divider sm:divider-warning lg:divider-horizontal">UP</div>
