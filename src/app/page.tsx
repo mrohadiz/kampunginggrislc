@@ -8,12 +8,14 @@ import Fasilitas from '@/components/Fasilitas'
 import Company from '@/components/Company'
 import Program from '@/components/Program'
 import Keseruan from '@/components/Keseruan'
+import Timeline from '@/components/Timeline'
 
 export default function Home() {
   return (
     <main className="">
       <Hero />
       <CTA />
+      <Timeline />
       <Manfaat />
       <Keseruan />
       <Alumni />

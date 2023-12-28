@@ -7,9 +7,11 @@ interface IProps {
 }
 
 const YoutubePlayer: React.FC<IProps> = (props) => {
+    const [load, setLoad] = useState(false);
+    const videoRef = useRef(null);
+
     const { videoId, autoPlay } = props;
-    const videoURL = `https://www.youtube.com/embed/${videoId}${autoPlay ? "?autoplay=1" : ""
-        }`;
+    const videoURL = `https://www.youtube.com/embed/${videoId}${autoPlay ? "?autoplay=1" : ""}`;
     const iframeRef = useRef<HTMLIFrameElement>(null);
     const defaultHeight = 495;
     const [videoHeight, setVideoHeight] = useState<number>(
@@ -32,6 +34,23 @@ const YoutubePlayer: React.FC<IProps> = (props) => {
     }, []);
 
     useEffect(() => {
+        const observer: any = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                setLoad(true);
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(videoRef.current);
+
+        return () => {
+            if (videoRef.current) {
+                observer.unobserve(videoRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
         window.addEventListener("resize", handleChangeVideoWidth);
         const ratio =
             window.innerWidth > 990
@@ -51,15 +70,20 @@ const YoutubePlayer: React.FC<IProps> = (props) => {
     }, [videoHeight, handleChangeVideoWidth]);
 
     return (
-        <iframe
-            ref={iframeRef}
-            width="100%"
-            height={`${videoHeight}px`}
-            src={videoURL}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-        />
+        <div ref={videoRef}>
+            {
+                load ? <iframe
+                    ref={iframeRef}
+                    width="100%"
+                    height={`${videoHeight}px`}
+                    src={videoURL}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                /> :
+                    <div>Loading ...</div>
+            }
+        </div>
     );
 };
 
