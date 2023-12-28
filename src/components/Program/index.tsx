@@ -116,7 +116,7 @@ export default function Program() {
                                     <select onChange={handleChangeInput} className="select select-bordered w-full max-w-xs">
                                         {
                                             pakets.map((paket, index) => (
-                                                <option value={index} key={index}>{paket.title}</option>
+                                                <option value={index} key={index} aria-label={paket.title}>{paket.title}</option>
                                             ))
                                         }
                                     </select>
