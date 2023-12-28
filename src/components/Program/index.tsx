@@ -113,10 +113,10 @@ export default function Program() {
                             <div className="flex items-center">
                                 <span className="mr-3">Pilihan Paket</span>
                                 <div className="relative">
-                                    <select onChange={handleChangeInput} className="select select-bordered w-full max-w-xs">
+                                    <select aria-label="pilihan paket" onChange={handleChangeInput} className="select select-bordered w-full max-w-xs">
                                         {
                                             pakets.map((paket, index) => (
-                                                <option value={index} key={index} aria-label={paket.title}>{paket.title}</option>
+                                                <option value={index} key={index}>{paket.title}</option>
                                             ))
                                         }
                                     </select>
