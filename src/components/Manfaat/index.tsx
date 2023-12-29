@@ -37,19 +37,19 @@ export default function Card() {
     ]
 
     return (
-        <div className="container py-10 flex flex-col md:flex-row">
-            <article className="prose flex flex-col w-full text-center sm:text-left">
-                <h2 className="text-2xl sm:text-4xl font-bold mb-2">
+        <div className="py-10 flex flex-col items-center justify-center bg-base-content">
+            <article className="container prose flex flex-col w-full text-center mb-1">
+                <h1 className="text-base-100">
                     Ini 8 Hal yang Bakal
                     <br />
-                    Kamu Dapetin di Kampung Inggris LC
-                </h2>
+                    Kamu Dapetin di LC
+                </h1>
             </article>
 
-            <div className="grid grid-cols-1 gap-2 sm:grid sm:grid-cols-3">
+            <div className="container grid grid-cols-1 gap-2 sm:grid sm:grid-cols-3 md:grid-cols-4 md:gap-4">
                 {content.map((item, index) => (
-                    <div key={index} className="card mb-4 bg-warning text-warning-content">
-                        <div className="card-body">
+                    <div key={index} className="card shadow-md">
+                        <div className="card-body text-base-100">
                             <h2 className="card-title">{item.title}</h2>
                             <p>{item.desc}</p>
                         </div>

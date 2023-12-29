@@ -7,12 +7,16 @@ import Masonry from "./Masonry"
 
 export default function Fasilitas() {
     return (
-        <div className="container flex flex-col py-10 w-full">
-            <div className="grid flex-grow card place-items-center">
-                <article className="container prose flex flex-col w-full text-center">
-                    <h2 className="text-2xl sm:text-4xl font-bold mb-2">Ini Fasilitas yang Bisa Kamu Nikmati di Kampung Inggris LC</h2>
-                </article>
-            </div>
+        <div className="container flex flex-col py-10 w-full items-center justify-center">
+            <article className="container prose flex flex-col w-full text-center">
+                <h1>Ini Fasilitas yang Bisa Kamu Nikmati di Kampung Inggris LC</h1>
+            </article>
+
+            {/* <div className="grid grid-cols-2 py-4">
+                <Masonry />
+                <MasonryKelas />
+            </div> */}
+
             <Masonry />
             <MasonryKelas />
         </div>

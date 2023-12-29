@@ -1,7 +1,7 @@
 "use client"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -25,7 +25,7 @@ export default function Masonry() {
     ]
     return (
         <div className="container flex flex-col items-center w-full">
-            <div className='w-full'>
+            {/* <div className='w-full'>
                 <Swiper
                     effect={'coverflow'}
                     loop={true}
@@ -40,11 +40,7 @@ export default function Masonry() {
                         slideShadows: true,
                     }}
                     pagination={{ el: '.swiper-pagination', clickable: true, dynamicBullets: true }}
-                    navigation={{
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    }}
-                    modules={[EffectCoverflow, Pagination, Navigation]}
+                    modules={[EffectCoverflow, Pagination]}
                 >
                     {kelases.map((teacher, index) => (
                         <div key={index}>
@@ -54,11 +50,7 @@ export default function Masonry() {
                         </div>
                     ))}
 
-                    <div className="slider-controler text-warning">
-                        <div className="swiper-button-prev slider-arrow">
-                        </div>
-                        <div className="swiper-button-next slider-arrow">
-                        </div>
+                    <div className="slider-controler">
                         <div className="swiper-pagination"></div>
                     </div>
                 </Swiper>
@@ -66,7 +58,16 @@ export default function Masonry() {
 
             <article className="prose py-4">
                 <h2>Kelas</h2>
-            </article>
+            </article> */}
+            <div className="grid grid-rows-none md:grid-cols-5 p-4 gap-4">
+                <div className="w-full col-span-2 md:col-span-3 row-span-3"><Image src={kelas_2} alt="gedung" /></div>
+                <div className="w-full h-full"><Image src={kelas_1} alt="gedung" /></div>
+                <div className="w-full h-full"><Image src={kelas_3} alt="gedung" /></div>
+                <div className="w-full h-full"><Image src={kelas_4} alt="gedung" /></div>
+                <div className="w-full h-full"><Image src={kelas_2} alt="gedung" /></div>
+                <div className="w-full h-full"><Image src={kelas_4} alt="gedung" /></div>
+                <div className="w-full h-full"><Image src={kelas_2} alt="gedung" /></div>
+            </div>
         </div>
     );
 }

@@ -7,10 +7,6 @@ export default function Card() {
             desc: 'LC akan ningkatin ke-pd-anmu dengan public speaking di depan teman-teman, jadi kamu terbiasa tampil di depan umum.'
         },
         {
-            title: 'Critical Thinking',
-            desc: 'Games dan aktivitas seru seperti English debate dan random question bakal asah kemampuan berpikir, berinovasi, dan berargumen dengan cerdas, sambil boost confidence-mu untuk berani sepak up berbahasa Inggris.'
-        },
-        {
             title: 'Grammar Hack',
             desc: 'Belajar grammar jadi mudah dan fun dengan teknik storytelling dan metode translation yang unik, bikin kamu jago mengaplikasikan ke dalam kalimat.'
         },
@@ -30,22 +26,26 @@ export default function Card() {
             title: 'English for Spesific Purpose',
             desc: 'LC akan membekali kamu dengan kosa kata dan hal lain yang berhubungan dengan tujuan belajar bahasa Inggrismu.'
         },
+        {
+            title: 'Critical Thinking',
+            desc: 'Games dan aktivitas seru seperti English debate dan random question bakal asah kemampuan berpikir, berinovasi, dan berargumen dengan cerdas, sambil boost confidence-mu untuk berani sepak up berbahasa Inggris.'
+        },
     ]
 
     return (
-        <div className="container py-10 flex flex-col md:flex-row">
-            <article className="prose flex flex-col w-full text-center sm:text-left">
-                <h2 className="text-2xl sm:text-4xl font-bold mb-2">
-                    7 Metode Kampung Inggris LC Ini Bikin Ribuan Member
+        <div className="py-10 flex flex-col items-center justify-center bg-base-content">
+            <article className="container prose mb-1 text-center">
+                <h1 className="text-base-100">
+                    7 Metode Ini Bikin Ribuan Member
                     <br />
                     Lancar Berbahasa Inggris
-                </h2>
+                </h1>
             </article>
 
-            <div className="grid grid-cols-1 gap-2 sm:grid sm:grid-cols-3">
+            <div className="container grid grid-cols-1 gap-4 content-center sm:grid sm:grid-cols-3">
                 {content.map((item, index) => (
-                    <div key={index} className="card mb-4 bg-warning text-warning-content">
-                        <div className="card-body">
+                    <div key={index} className="card shadow-md">
+                        <div className="card-body text-base-100">
                             <h2 className="card-title">{item.title}</h2>
                             <p>{item.desc}</p>
                         </div>

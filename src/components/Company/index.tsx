@@ -17,13 +17,15 @@ import partnership_4 from '../../assets/kampung-inggris-lc-pare-partnership-4.we
 export default function Company() {
     return (
         <div className="py-20 flex flex-col items-center justify-center gap-4">
-            <article className="prose">
-                <h1 className="text-3xl sm:text-5xl font-bold text-center">
-                    Mereka Sudah Belajar di Kampung Inggris LC
+            <article className="prose text-center">
+                <h1>
+                    Mereka Sudah Belajar di
+                    <br />
+                    Kampung Inggris LC
                 </h1>
             </article>
 
-            <div className='container'>
+            <div className='container py-10'>
                 <Swiper
                     loop={true}
                     grabCursor={true}
@@ -53,10 +55,11 @@ export default function Company() {
             </div>
 
             <article className="prose">
-                <h1 className="text-3xl sm:text-5xl font-bold text-center">
+                <h1>
                     Sekarang Giliranmu
                 </h1>
             </article>
+
             <div className="arrow flex items-center justify-center w-full">
                 <svg className="animate-bounce" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z" /></svg>
             </div>

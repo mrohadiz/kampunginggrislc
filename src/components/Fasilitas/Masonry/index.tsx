@@ -1,7 +1,7 @@
 "use client"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -14,7 +14,6 @@ import asrama_2 from '../../../assets/fasilitas/kampung-inggris-lc-vip-camp-2.we
 import asrama_3 from '../../../assets/fasilitas/kampung-inggris-lc-vip-camp-3.webp'
 import asrama_4 from '../../../assets/fasilitas/kampung-inggris-lc-vip-camp-4.webp'
 import asrama_5 from '../../../assets/fasilitas/kampung-inggris-lc-vip-camp-5.webp'
-import asrama_6 from '../../../assets/fasilitas/kampung-inggris-lc-vip-camp-6.webp'
 
 export default function Masonry() {
   const asramas = [
@@ -43,16 +42,11 @@ export default function Masonry() {
       desc: "",
       tag: "#reguler",
     },
-    {
-      img: asrama_6,
-      desc: "",
-      tag: "#reguler",
-    },
   ]
 
   return (
     <div className="container flex flex-col items-center w-full">
-      <div className='w-full'>
+      {/* <div className='w-full'>
         <Swiper
           effect={'coverflow'}
           loop={true}
@@ -67,11 +61,7 @@ export default function Masonry() {
             slideShadows: true,
           }}
           pagination={{ el: '.swiper-pagination', clickable: true, dynamicBullets: true }}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
+          modules={[EffectCoverflow, Pagination]}
         >
           {asramas.map((asrama, index) => (
             <div key={index}>
@@ -81,19 +71,23 @@ export default function Masonry() {
             </div>
           ))}
 
-          <div className="slider-controler text-warning">
-            <div className="swiper-button-prev slider-arrow">
-            </div>
-            <div className="swiper-button-next slider-arrow">
-            </div>
+          <div className="slider-controler">
             <div className="swiper-pagination"></div>
           </div>
         </Swiper>
+      </div> */}
+      <div className="grid grid-rows-none md:grid-cols-5 p-4 gap-4">
+        <div className="w-full col-span-2 md:col-span-3 row-span-3"><Image src={asrama_1} alt="gedung" /></div>
+        <div className="w-full h-full object-cover"><Image src={asrama_2} alt="gedung" /></div>
+        <div className="w-full h-full object-cover"><Image src={asrama_3} alt="gedung" /></div>
+        <div className="w-full h-full object-cover"><Image src={asrama_4} alt="gedung" /></div>
+        <div className="w-full h-full object-cover"><Image src={asrama_5} alt="gedung" /></div>
+        <div className="w-full h-full object-cover"><Image src={asrama_1} alt="gedung" /></div>
+        <div className="w-full h-full object-cover"><Image src={asrama_2} alt="gedung" /></div>
       </div>
-
-      <article className="prose py-4">
+      {/* <article className="prose py-4">
         <h2>Asrama</h2>
-      </article>
+      </article> */}
 
     </div>
   );

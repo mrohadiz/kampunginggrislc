@@ -6,7 +6,7 @@ export default function ThemeSwap({
   return (
     <>
       < div className="dropdown" >
-        <div tabIndex={0} role="button" className="btn m-1">
+        <div tabIndex={0} role="button" className="btn m-1 bg-transparent border-none text-base-content">
           Tema
           <span className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
@@ -18,11 +18,11 @@ export default function ThemeSwap({
           <li onClick={handleOnClick}><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Dark" value="dark" /></li>
           <li onClick={handleOnClick}><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Light" value="light" /></li>
           <li onClick={handleOnClick}><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Retro" value="retro" /></li>
-          <li onClick={handleOnClick}><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Cyber" value="cyberpunk" /></li>
           <li onClick={handleOnClick}><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Aqua" value="aqua" /></li>
           <li onClick={handleOnClick}><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Night" value="night" /></li>
           <li onClick={handleOnClick}><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Valentine" value="valentine" /></li>
           <li onClick={handleOnClick}><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Winter" value="winter" /></li>
+          <li onClick={handleOnClick}><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Cyber" value="cyberpunk" /></li>
         </ul>
       </div >
     </>

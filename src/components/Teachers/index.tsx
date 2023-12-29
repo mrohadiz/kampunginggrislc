@@ -31,34 +31,24 @@ export default function Teachers() {
         teacher_9,
     ]
     return (
-        <div className="container flex flex-col py-10">
+        <div className="flex flex-col py-10 bg-base-content">
             <article className="container prose flex flex-col w-full text-center">
-                <h1 className="text-3xl sm:text-5xl font-bold text-center">Yuk Kenalan Sama Teacher Kampung Inggris LC</h1>
+                <h1 className='text-base-100'>Yuk Kenalan Sama Teacher Kampung Inggris LC</h1>
             </article>
 
-            <div className='w-full'>
+            <div className='container py-10'>
                 <Swiper
                     effect={'coverflow'}
                     loop={true}
                     grabCursor={true}
                     centeredSlides={true}
-                    slidesPerView={1}
+                    slidesPerView={3}
                     autoHeight={true}
                     coverflowEffect={{
                         rotate: 0,
                         stretch: 0,
                         depth: 100,
                         modifier: 7,
-                    }}
-                    breakpoints={{
-                        768: {
-                            slidesPerView: 3,
-                            spaceBetween: 40,
-                        },
-                        1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 50,
-                        },
                     }}
                     pagination={{ el: '.swiper-pagination', clickable: true, dynamicBullets: true }}
                     navigation={{

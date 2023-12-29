@@ -68,13 +68,13 @@ export default function Program() {
     ]
 
     return (
-        <section className="container py-10">
+        <div className="flex flex-col items-center justify-center w-full py-10">
             <article className="container prose flex flex-col w-full text-center">
-                <h1 className="text-3xl sm:text-5xl font-bold text-center">Pilih Paket Belajar Sesuai Kebutuhanmu</h1>
+                <h1>Pilih Paket Belajar Sesuai Kebutuhanmu</h1>
             </article>
-            <div className="mt-10">
-                <div className="lg:w-4/5 mx-auto flex flex-wrap">
-                    <Image alt="kampung inggris lc paket" src={pakets[currentProduct].img} className="lg:w-1/3 w-full object-cover object-center rounded border border-warning" />
+            <div className="container mt-10 w-full">
+                <div className="flex flex-wrap-reverse items-center justify-center">
+                    <Image alt="kampung inggris lc paket" src={pakets[currentProduct].img} className="lg:w-1/4 w-full object-cover object-center rounded border border-warning" />
                     <article className="prose lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                         <h2 className="text-sm tracking-widest">NAMA PROGRAM</h2>
                         <h1 className="text-3xl font-medium mb-1">{pakets[currentProduct].title}</h1>
@@ -132,6 +132,6 @@ export default function Program() {
                     </article>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }

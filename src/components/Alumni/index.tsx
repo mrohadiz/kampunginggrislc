@@ -30,25 +30,19 @@ export default function Alumni() {
         testi_2,
     ]
     return (
-        <div className="container flex flex-col w-full lg:flex-row">
-            <div className="grid flex-grow sm:h-[70vh] card place-items-center">
-                <article className="container prose flex flex-col w-full text-center">
-                    <h2 className="text-2xl sm:text-4xl font-bold mb-2">Temui Alumni Kampung Inggris LC yang Sukses dan Dapetin Inspirasi di Sini</h2>
-                </article>
-            </div>
-            <div className="hidden sm:divider sm:divider-warning lg:divider-horizontal">UP</div>
-            <div className="sm:hidden divider divider-warning lg:divider-horizontal">SWIPE</div>
-            <div className="grid flex-grow card bg-base-300 rounded-box place-items-center">
-                <div className="sm:h-[70vh] carousel px-2 gap-2 sm:carousel-vertical rounded-box place-items-center">
-                    {testies.map((testi, index) => (
-                        <div key={index} className="carousel-item w-2/3">
-                            <Image
-                                alt="kampung inggris lc teacher"
-                                src={testi}
-                            />
-                        </div>
-                    ))}
-                </div>
+        <div className="flex flex-col w-full items-center justify-center py-10">
+            <article className="container prose flex flex-col w-full text-center">
+                <h1>Temui Alumni yang Sukses dan Dapetin Inspirasi di Sini</h1>
+            </article>
+            <div className="container carousel carousel-center p-2 space-x-4">
+                {testies.map((testi, index) => (
+                    <div key={index} className="carousel-item w-2/3 lg:w-1/3">
+                        <Image
+                            alt="kampung inggris lc alumni"
+                            src={testi}
+                        />
+                    </div>
+                ))}
             </div>
         </div>
     )

@@ -12,7 +12,7 @@ import Timeline from '@/components/Timeline'
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="ease-in duration-300">
       <Hero />
       <CTA />
       <Timeline />
