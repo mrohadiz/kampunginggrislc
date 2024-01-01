@@ -9,7 +9,6 @@ import { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  robots: { index: false, follow: false },
   title: "Kampung Inggris LC",
   description: "Kursus Bahasa Inggris Terfavorit di Kampung Inggris",
   verification: {
