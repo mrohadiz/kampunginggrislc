@@ -4,13 +4,18 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import ClientThemeWrapper from "@/context/ClientThemeWrapper";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "Kampung Inggris LC",
   description: "Kursus Bahasa Inggris Terfavorit di Kampung Inggris",
-};
+  verification: {
+    google: "PCJgKqf7_1krHwDsc0pe7uor_J0dEHz-Xv1HEbBw_m0"
+  },
+}
 
 export default function RootLayout({
   children,
