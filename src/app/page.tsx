@@ -15,14 +15,14 @@ export default function Home() {
   return (
     <main className="ease-in duration-300">
 
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-HMS8J1N0MY" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+          gtag('config', 'G-HMS8J1N0MY');
         `}
       </Script>
 
