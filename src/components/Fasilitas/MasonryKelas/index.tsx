@@ -59,14 +59,14 @@ export default function Masonry() {
             <article className="prose py-4">
                 <h2>Kelas</h2>
             </article> */}
-            <div className="grid grid-rows-none md:grid-cols-5 p-4 gap-4">
+            <div className="grid grid-rows-none md:grid-cols-5 p-4 gap-4 items-center">
                 <div className="w-full col-span-2 md:col-span-3 row-span-3"><Image src={kelas_2} alt="gedung" /></div>
                 <div className="w-full h-full"><Image src={kelas_1} alt="gedung" /></div>
                 <div className="w-full h-full"><Image src={kelas_3} alt="gedung" /></div>
                 <div className="w-full h-full"><Image src={kelas_4} alt="gedung" /></div>
                 <div className="w-full h-full"><Image src={kelas_2} alt="gedung" /></div>
-                <div className="w-full h-full"><Image src={kelas_4} alt="gedung" /></div>
-                <div className="w-full h-full"><Image src={kelas_2} alt="gedung" /></div>
+                <div className="w-full h-full"><Image src={kelas_1} alt="gedung" /></div>
+                <div className="w-full h-full"><Image src={kelas_3} alt="gedung" /></div>
             </div>
         </div>
     );

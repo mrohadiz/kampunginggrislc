@@ -76,7 +76,7 @@ export default function Masonry() {
           </div>
         </Swiper>
       </div> */}
-      <div className="grid grid-rows-none md:grid-cols-5 p-4 gap-4">
+      <div className="grid grid-rows-none md:grid-cols-5 p-4 gap-4 items-center">
         <div className="w-full col-span-2 md:col-span-3 row-span-3"><Image src={asrama_1} alt="gedung" /></div>
         <div className="w-full h-full object-cover"><Image src={asrama_2} alt="gedung" /></div>
         <div className="w-full h-full object-cover"><Image src={asrama_3} alt="gedung" /></div>

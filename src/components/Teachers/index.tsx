@@ -42,13 +42,23 @@ export default function Teachers() {
                     loop={true}
                     grabCursor={true}
                     centeredSlides={true}
-                    slidesPerView={3}
+                    slidesPerView={1}
                     autoHeight={true}
                     coverflowEffect={{
                         rotate: 0,
                         stretch: 0,
                         depth: 100,
                         modifier: 7,
+                    }}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 50,
+                        },
                     }}
                     pagination={{ el: '.swiper-pagination', clickable: true, dynamicBullets: true }}
                     navigation={{
