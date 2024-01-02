@@ -55,7 +55,7 @@ export default function Card() {
     ]
 
     return (
-        <div className="flex flex-col items-center justify-center mt-20">
+        <div className="container flex flex-col items-center justify-center mt-20">
             <article className="prose flex flex-col w-full text-center mb-1">
                 <h1>
                     Ini 8 Hal yang Bakal Kamu Dapetin
@@ -64,9 +64,9 @@ export default function Card() {
                 </h1>
             </article>
 
-            <div className="container grid grid-cols-1 gap-2 sm:grid sm:grid-cols-3 md:gap-4">
+            <div className="grid grid-cols-1 gap-2 sm:grid sm:grid-cols-3 md:gap-4">
                 {content.map((item, index) => (
-                    <div key={index} className="card w-96 bg-base-100 shadow-md">
+                    <div key={index} className="card w-auto md:w-96 bg-base-100 shadow-md">
                         <figure className="px-10 pt-10 ">
                             <Image
                                 alt="kampung inggris lc manfat"

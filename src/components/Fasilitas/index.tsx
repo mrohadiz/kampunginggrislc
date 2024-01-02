@@ -4,6 +4,8 @@ import { useState } from "react"
 import MasonryGedung from "./MasonryGedung"
 import MasonryKelas from "./MasonryKelas"
 import Masonry from "./Masonry"
+import Image from "next/image"
+import fasilitas from "../../assets/fasilitas/fasilitas-lc.webp"
 
 export default function Fasilitas() {
     return (
@@ -11,14 +13,13 @@ export default function Fasilitas() {
             <article className="container prose flex flex-col w-full text-center">
                 <h1>Ini Fasilitas yang Bisa Kamu Nikmati di Kampung Inggris LC</h1>
             </article>
-
-            {/* <div className="grid grid-cols-2 py-4">
-                <Masonry />
-                <MasonryKelas />
-            </div> */}
-
-            <Masonry />
-            <MasonryKelas />
+            {/* <Masonry />
+            <MasonryKelas /> */}
+            <Image
+                alt="fasilitas lc"
+                className="container md:w-1/3 mt-10"
+                src={fasilitas}
+            />
         </div>
     )
 }

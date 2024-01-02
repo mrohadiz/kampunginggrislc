@@ -20,15 +20,42 @@ import teacher_9 from "../../assets/kampung-inggris-lc-pare-teacher-9.webp"
 
 export default function Teachers() {
     const teachers = [
-        teacher_1,
-        teacher_2,
-        teacher_3,
-        teacher_4,
-        teacher_5,
-        teacher_6,
-        teacher_7,
-        teacher_8,
-        teacher_9,
+        {
+            id: 11,
+            img: teacher_1,
+        },
+        {
+            id: 21,
+            img: teacher_2,
+        },
+        {
+            id: 31,
+            img: teacher_3,
+        },
+        {
+            id: 41,
+            img: teacher_4,
+        },
+        {
+            id: 51,
+            img: teacher_5,
+        },
+        {
+            id: 61,
+            img: teacher_6,
+        },
+        {
+            id: 71,
+            img: teacher_7,
+        },
+        {
+            id: 81,
+            img: teacher_8,
+        },
+        {
+            id: 91,
+            img: teacher_9,
+        },
     ]
     return (
         <div className="flex flex-col py-10 bg-base-content">
@@ -67,10 +94,10 @@ export default function Teachers() {
                     }}
                     modules={[EffectCoverflow, Pagination, Navigation]}
                 >
-                    {teachers.map((teacher, index) => (
-                        <div key={index}>
+                    {teachers.map((teacher) => (
+                        <div key={teacher.id}>
                             <SwiperSlide>
-                                <Image src={teacher} alt="kampung inggris lc teachers" />
+                                <Image src={teacher.img} alt="kampung inggris lc teachers" />
                             </SwiperSlide>
                         </div>
                     ))}

@@ -78,6 +78,7 @@ const YoutubePlayer: React.FC<IProps> = (props) => {
                     height={`${videoHeight}px`}
                     src={videoURL}
                     frameBorder="0"
+                    title="YoutubeVideo"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                 /> :

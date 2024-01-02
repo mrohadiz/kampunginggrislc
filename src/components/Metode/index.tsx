@@ -48,7 +48,7 @@ export default function Card() {
     ]
 
     return (
-        <div className="py-10 flex flex-col items-center justify-center">
+        <div className="container py-10 flex flex-col items-center justify-center">
             <article className="container prose mb-1 text-center">
                 <h1>
                     7 Metode Ini Bikin Ribuan Member
@@ -57,9 +57,9 @@ export default function Card() {
                 </h1>
             </article>
 
-            <div className="container grid grid-cols-1 gap-4 content-center sm:grid sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 content-center sm:grid sm:grid-cols-3">
                 {content.map((item, index) => (
-                    <div key={index} className="card w-96 bg-base-100 shadow-md">
+                    <div key={index} className="card w-auto md:w-96 bg-base-100 shadow-md">
                         <figure className="px-10 pt-10 ">
                             <Image
                                 alt="kampung inggris lc manfat"
